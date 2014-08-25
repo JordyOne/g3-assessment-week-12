@@ -9,9 +9,10 @@ feature "welcome" do
   scenario "user can see new movies fields" do
     visit "/"
 
+    click_on("Add Movie")
+
     expect(page).to have_field("Name")
     expect(page).to have_field("Year")
     expect(page).to have_field("Synopsis")
   end
 end
-
