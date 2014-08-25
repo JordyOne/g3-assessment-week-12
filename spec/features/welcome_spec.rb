@@ -5,5 +5,13 @@ feature "welcome" do
     expect(page).to have_content("CageFlix")
     expect(page).to have_content("Netflix for Nic Cage movies")
   end
+
+  scenario "user can see new movies fields" do
+    visit "/"
+
+    expect(page).to have_field("Name")
+    expect(page).to have_field("Year")
+    expect(page).to have_field("Synopsis")
+  end
 end
 
