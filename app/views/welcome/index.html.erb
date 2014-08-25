@@ -1,17 +1,16 @@
-
-
 <p>
   <% if flash[:notice] %>
       <%= flash[:notice] %>
   <% end %>
+</p>
 
 <h2><a href="<%= new_movie_path %>">Add Movie</a></h2>
 
-<% @movies.each do |movie| %>
-<p>
-  <%= movie.name %> (<%= movie.year %>)<br>
-  <br>
-  <%= movie.synopsis %>
-  <%end%>
+<% @sorted_movies.each do |movie| %>
+    <p>
+      <%= movie.name %> (<%= movie.year %>)<br>
+      <br>
+      <%= movie.synopsis %>
+<% end %>
 </p>
 

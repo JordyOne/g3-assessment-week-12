@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def new
-    @movies = Movie.new
+    @movie = Movie.new
     render new_movie_path
   end
 
