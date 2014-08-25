@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
       redirect_to "/"
     else
       flash[:notice] = "Your Cage experience could not be added"
+      render new_movie_path
     end
   end
 end

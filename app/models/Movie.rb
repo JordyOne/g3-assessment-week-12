@@ -1,9 +1,10 @@
 class Movie < ActiveRecord::Base
   validates :name,
-            :presence => {:message => "Your Cage experience could not be added"}
+            :presence => {:message => "is blank"}
   validates :year,
-            :presence => {:message => "Your Cage experience could not be added"}
+            :numericality => { only_integer: true },
+            :presence => {:message => "is blank"}
   validates :synopsis,
-            :presence => {:message => "You didn't describe your Cage experience"}
+            :presence => {:message => "is blank"}
 
 end
