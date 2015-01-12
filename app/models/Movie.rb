@@ -1,10 +1,10 @@
 class Movie < ActiveRecord::Base
   validates :name,
-            :presence => {:message => "is blank"}
+            :presence => {:message => "can't be blank"}
   validates :year,
-            :numericality => {only_integer: true},
-            :presence => {:message => "is blank"}
+            :numericality => {only_integer: true, :message => "must be a number"},
+            :presence => {:message => "can't be blank"}
   validates :synopsis,
-            :presence => {:message => "is blank"}
+            :presence => {:message => "can't be blank"}
 
 end

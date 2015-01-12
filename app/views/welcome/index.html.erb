@@ -6,7 +6,7 @@
 
 <h2><a href="<%= new_movie_path %>">Add Movie</a></h2>
 
-<% @sorted_movies.each do |movie| %>
+<% @movies.each do |movie| %>
     <p>
       <%= movie.name %> (<%= movie.year %>)<br>
       <br>

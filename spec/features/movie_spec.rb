@@ -22,9 +22,9 @@ feature "movies" do
 
     click_on("Create Movie")
 
-    expect(page).to have_content("Name is blank")
-    expect(page).to have_content("Year is not a number")
-    expect(page).to have_content("Year is blank")
-    expect(page).to have_content("Synopsis is blank")
+    expect(page).to have_content("Name can't be blank")
+    expect(page).to have_content("Year must be a number")
+    expect(page).to have_content("Year can't be blank")
+    expect(page).to have_content("Synopsis can't be blank")
   end
 end
