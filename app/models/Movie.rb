@@ -6,5 +6,4 @@ class Movie < ActiveRecord::Base
             :presence => {:message => "can't be blank"}
   validates :synopsis,
             :presence => {:message => "can't be blank"}
-
 end
